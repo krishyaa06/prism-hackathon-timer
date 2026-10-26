@@ -1,0 +1,25 @@
+    <section class="card clock" id="clock">
+      <div class="ev-title" id="name" contenteditable="true" spellcheck="false">Prism Hack Night</div>
+      <div class="digits" id="digits">24:00:00</div>
+      <div class="phase" id="phase">Ready</div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="nowrow"><div><span>Now</span><b id="cur">—</b></div><div><span>Up next</span><b id="nxt">—</b></div></div>
+      <div class="row ctrls">
+        <button class="btn primary" id="start">Start</button>
+        <button class="btn" id="pause">Pause</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="fs">Fullscreen</button>
+      </div>
+    </section>
+    <section class="grid g2">
+      <div class="card">
+        <div class="card-title"><h2>Setup</h2></div>
+        <label class="field"><span>Duration (24h, 36h, 1h30m, 48:00:00)</span><input id="dur" value="24h" /></label>
+        <div class="chips" id="presets"><button data-d="2h">2h</button><button data-d="12h">12h</button><button data-d="24h">24h</button><button data-d="36h">36h</button><button data-d="48h">48h</button></div>
+        <label class="check"><input type="checkbox" id="chime" checked /> Chime on milestones</label>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Schedule</h2><span class="pill">offset from start</span></div>
+        <textarea id="sched" class="code" spellcheck="false" aria-label="Schedule"></textarea>
+      </div>
+    </section>

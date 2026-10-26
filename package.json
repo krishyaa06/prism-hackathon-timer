@@ -1,0 +1,30 @@
+{
+  "name": "prism-hackathon-timer",
+  "version": "1.0.0",
+  "description": "Fullscreen hackathon countdown with schedule, milestones, chimes and pause/resume that survives reloads.",
+  "scripts": {
+    "test": "node --test",
+    "start": "npx --yes serve ."
+  },
+  "keywords": [
+    "hackathon",
+    "countdown",
+    "timer",
+    "game-jam",
+    "community",
+    "events",
+    "fullscreen",
+    "vanilla-js",
+    "prism-protocol"
+  ],
+  "author": "Soumya Bhandare (krishyaa06)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishyaa06/prism-hackathon-timer.git"
+  },
+  "homepage": "https://krishyaa06.github.io/prism-hackathon-timer/",
+  "engines": {
+    "node": ">=18.17"
+  }
+}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prism Hackathon Timer · Prism Protocol</title>
+  <meta name="description" content="Fullscreen hackathon countdown with schedule, milestones, chimes and pause/resume that survives reloads." />
+  <meta name="theme-color" content="#07080f" />
+  <meta property="og:title" content="Prism Hackathon Timer · Prism Protocol" />
+  <meta property="og:description" content="Fullscreen hackathon countdown with schedule, milestones, chimes and pause/resume that survives reloads." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/prism.css" />
+  <link rel="stylesheet" href="css/app.css" />
+  <style>:root{--accent:#FF6B9A;--accent-2:#FFC857}</style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="mark">◇</span><b>PRISM</b><span>Hackathon Timer</span></a>
+    <nav>
+      <a class="btn small" href="https://github.com/krishyaa06/prism-hackathon-timer" target="_blank" rel="noreferrer">★ GitHub</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <p class="eyebrow">⏱️ Community</p>
+      <h1>Ship before <em>the buzzer.</em></h1>
+      <p class="lead">A projector-ready countdown for hackathons and game jams, with a schedule that shows what's on now and what's next.</p>
+    </section>
+    <section class="card clock" id="clock">
+      <div class="ev-title" id="name" contenteditable="true" spellcheck="false">Prism Hack Night</div>
+      <div class="digits" id="digits">24:00:00</div>
+      <div class="phase" id="phase">Ready</div>
+      <div class="bar"><i id="bar"></i></div>
+      <div class="nowrow"><div><span>Now</span><b id="cur">—</b></div><div><span>Up next</span><b id="nxt">—</b></div></div>
+      <div class="row ctrls">
+        <button class="btn primary" id="start">Start</button>
+        <button class="btn" id="pause">Pause</button>
+        <button class="btn" id="reset">Reset</button>
+        <button class="btn" id="fs">Fullscreen</button>
+      </div>
+    </section>
+    <section class="grid g2">
+      <div class="card">
+        <div class="card-title"><h2>Setup</h2></div>
+        <label class="field"><span>Duration (24h, 36h, 1h30m, 48:00:00)</span><input id="dur" value="24h" /></label>
+        <div class="chips" id="presets"><button data-d="2h">2h</button><button data-d="12h">12h</button><button data-d="24h">24h</button><button data-d="36h">36h</button><button data-d="48h">48h</button></div>
+        <label class="check"><input type="checkbox" id="chime" checked /> Chime on milestones</label>
+      </div>
+      <div class="card">
+        <div class="card-title"><h2>Schedule</h2><span class="pill">offset from start</span></div>
+        <textarea id="sched" class="code" spellcheck="false" aria-label="Schedule"></textarea>
+      </div>
+    </section>
+
+  </main>
+  <footer class="foot">
+    <span>◇ Prism Hackathon Timer · Part of <a href="https://dc.gg/prismprotocol" target="_blank" rel="noreferrer">Prism Protocol</a></span>
+    <span><a href="https://github.com/krishyaa06/prism-hackathon-timer" target="_blank" rel="noreferrer">Source</a> · MIT License · Runs 100% in your browser</span>
+  </footer>
+  <script src="js/prism.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
